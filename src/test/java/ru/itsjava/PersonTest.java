@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @DisplayName("PersonTest должен:")
 public class PersonTest {
@@ -38,19 +40,19 @@ public class PersonTest {
 
         actualPerson.birthday();
 
-        int changedAge = AGE + 1;
-        assertEquals(changedAge, actualPerson.getAge());
+        assertEquals(AGE + 1, actualPerson.getAge());
     }
 
     @DisplayName("корректно применять метод takeBeer")
     @Test
     public void shouldHaveCorrectTakBeer(){
-        Person actualPerson = new Person("Petr", 38);
+        Person actualPerson = new Person("Petr", 27);
 
-        if (actualPerson.getAge() >= 18){
-            assertEquals(true, actualPerson.takeBeer());
-        } else{
-            assertEquals(false, actualPerson.takeBeer());
-        }
+//        if (actualPerson.getAge() >= 18){
+//            assertEquals(true, actualPerson.takeBeer());
+//        } else{
+//            assertEquals(false, actualPerson.takeBeer());
+//        }
+        assertTrue(actualPerson.takeBeer());
     }
 }
