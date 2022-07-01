@@ -2,6 +2,7 @@ package ru.itsjava.task5;
 
 public class Figure {
     private int a, b, c;
+    private static final double PI = Math.PI;
 
     public Figure(int a, int b) {
         this.a = a;
