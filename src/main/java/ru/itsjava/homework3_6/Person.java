@@ -18,10 +18,10 @@ public class Person implements Comparable<Person>, Cloneable{
 
     @Override
     public int compareTo(Person p) {
-        if (name.equals(p.name)){
-            return surname.charAt(0) - p.surname.charAt(0);
-        } else if (surname.equals(p.surname)){
+        if (!name.equals(p.name)){
             return name.charAt(0) - p.name.charAt(0);
+        } else if (!surname.equals(p.surname)){
+            return surname.charAt(0) - p.surname.charAt(0);
         } else{
             return age - p.age;
         }
