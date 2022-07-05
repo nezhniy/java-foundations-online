@@ -1,6 +1,6 @@
 package ru.itsjava.task5;
 
-public class Figure {
+public abstract class Figure {
     private int a, b, c;
     private static final double PI = Math.PI;
 
