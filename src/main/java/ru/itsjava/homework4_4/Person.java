@@ -7,11 +7,8 @@ public class Person {
     public Person(String name, int age){
         this.name = name;
         this.age = age;
-    }
 
-    public static void isSatisfy(Person p){
-
-        if (p.getAge() <= 0 || p.getAge() >= 150){
+        if (getAge() <= 0 || getAge() >= 150){
             try {
                 throw new AgeNotValidException("Wtf?");
             } catch (Exception e){
