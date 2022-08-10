@@ -4,17 +4,14 @@ public class Person {
     private String name;
     private int age;
 
-    public Person(String name, int age){
+    public Person(String name, int age) throws AgeNotValidException{
         this.name = name;
-        this.age = age;
-
-        if (getAge() <= 0 || getAge() >= 150){
-            try {
-                throw new AgeNotValidException("Wtf?");
-            } catch (Exception e){
-                e.printStackTrace();
-            }
+        if (age > 0 && age <= 150){
+            this.age = age;
+        } else{
+            throw new AgeNotValidException();
         }
+
     }
 
     public String getName() {
